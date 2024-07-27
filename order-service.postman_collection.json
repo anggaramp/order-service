@@ -1,0 +1,494 @@
+{
+	"info": {
+		"_postman_id": "935a1bbd-1ff3-4820-b252-3d49693be3c9",
+		"name": "order-service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5993368"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Create User",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"test2@gmail.com\",\n    \"username\": \"admin\",\n    \"password\": \"admin\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/v1/admin/user",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"v1",
+								"admin",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"test@gmail.com\",\n    \"username\": \"admin\",\n    \"password\": \"admin\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/v1/admin/user/43fd7f40-6d1d-4ca0-8b99-3f9223d7b66a",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"v1",
+								"admin",
+								"user",
+								"43fd7f40-6d1d-4ca0-8b99-3f9223d7b66a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/v1/admin/user?limit=1&keyword",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"v1",
+								"admin",
+								"user"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "1"
+								},
+								{
+									"key": "cursor",
+									"value": "ac75b64b-a7a1-48d0-a1c8-61bfcd4a3ed2",
+									"disabled": true
+								},
+								{
+									"key": "keyword",
+									"value": null,
+									"description": "search by username"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User By UID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/v1/admin/user/43fd7f40-6d1d-4ca0-8b99-3f9223d7b66a",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"v1",
+								"admin",
+								"user",
+								"43fd7f40-6d1d-4ca0-8b99-3f9223d7b66a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User By UID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/v1/admin/user/43fd7f40-6d1d-4ca0-8b99-3f9223d7b66a",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"v1",
+								"admin",
+								"user",
+								"43fd7f40-6d1d-4ca0-8b99-3f9223d7b66a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"test@gmail.com\",\n    \"password\": \"admin\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/v1/admin/login",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"v1",
+								"admin",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "Create Customer",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"test2@gmail.com\",\n    \"name\": \"admin\",\n    \"address\": \"jl udin\",\n    \"mobile\": \"089797868\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/v1/admin/customer",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"v1",
+								"admin",
+								"customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Customer",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"test@gmail.com\",\n    \"name\": \"admin\",\n    \"address\": \"jl udin\",\n    \"mobile\": \"089797868\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/v1/admin/customer/77695ef3-2ff2-45f4-ae91-ff3e4f9e2a9d",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"v1",
+								"admin",
+								"customer",
+								"77695ef3-2ff2-45f4-ae91-ff3e4f9e2a9d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Customer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/v1/admin/customer?limit=1&keyword=ad",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"v1",
+								"admin",
+								"customer"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "1"
+								},
+								{
+									"key": "keyword",
+									"value": "ad",
+									"description": "search by name"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Customer By UID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/v1/admin/customer/77695ef3-2ff2-45f4-ae91-ff3e4f9e2a9d",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"v1",
+								"admin",
+								"customer",
+								"77695ef3-2ff2-45f4-ae91-ff3e4f9e2a9d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Customer By UID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/v1/admin/customer/43fd7f40-6d1d-4ca0-8b99-3f9223d7b66a",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"v1",
+								"admin",
+								"customer",
+								"43fd7f40-6d1d-4ca0-8b99-3f9223d7b66a"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "Order",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"goods_name\": \"beng beng\",\n    \"description\": \"cemilan\",\n    \"amount\": 100000,\n    \"customer_uid\": \"77695ef3-2ff2-45f4-ae91-ff3e4f9e2a9d\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/v1/admin/order",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"v1",
+								"admin",
+								"order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Order",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"goods_name\": \"beng bengs\",\n    \"description\": \"cemilan\",\n    \"amount\": 100000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/v1/admin/order/28e1aac7-359c-4895-a016-78f642679a21",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"v1",
+								"admin",
+								"order",
+								"28e1aac7-359c-4895-a016-78f642679a21"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Order",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/v1/admin/order?limit=1&cursor&keyword",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"v1",
+								"admin",
+								"order"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "1"
+								},
+								{
+									"key": "cursor",
+									"value": null
+								},
+								{
+									"key": "keyword",
+									"value": null,
+									"description": "search by goods name"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Order By UID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/v1/admin/order/28e1aac7-359c-4895-a016-78f642679a21",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"v1",
+								"admin",
+								"order",
+								"28e1aac7-359c-4895-a016-78f642679a21"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Order By UID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/v1/admin/order/28e1aac7-359c-4895-a016-78f642679a21",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"v1",
+								"admin",
+								"order",
+								"28e1aac7-359c-4895-a016-78f642679a21"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Migration DB",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/v1/admin/migration",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"v1",
+						"admin",
+						"migration"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo3LCJleHAiOjE3MjIyODA0MTN9.m8m1TCQpLvCe4q3l3HTnj53jbO23PD1TaaVYz90ljRc",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
