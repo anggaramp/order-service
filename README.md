@@ -18,12 +18,18 @@ Go to the project directory
   cd my-project
 ```
 
-Install dependencies
+Install dependencies and run docker 
 
 ```bash
   make setup
 ```
-Setup DB
+Create Database
+
+```bash
+  import file setup.sql for create database
+```
+
+Setup DB Connection
 
 ```bash
   Update file .env.local on host DB base on your system
