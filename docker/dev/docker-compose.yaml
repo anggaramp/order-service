@@ -5,10 +5,12 @@ services:
     platform: linux/x86_64
     environment:
       MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+      MYSQL_DATABASE: order_service
     restart: always
     ports:
       - '3306:3306'
     volumes:
       - mysql:/var/lib/mysql
+
 volumes:
   mysql:
