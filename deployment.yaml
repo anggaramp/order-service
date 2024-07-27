@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app.kubernetes.io/name: load-balancer-order-service
+  name: order-service
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: load-balancer-order-service
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: load-balancer-order-service
+    spec:
+      containers:
+        - image: order-service:latest
+          name: order-service
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8900
+          env:
+            - name: KLAUS_PORT
+              value: "8900"
